@@ -3,4 +3,18 @@
 
 [tools]
 node = "latest"
+pipx = "latest"
 pnpm = "latest"
+python = "latest"
+
+[tasks]
+
+
+[tasks.reuse_lint]
+run = "pipx run reuse lint"
+
+[tasks.reuse_annotate]
+run = "pipx run reuse annotate --license MPL-2.0"
+
+[tasks.lint]
+depends = ["reuse_lint"]

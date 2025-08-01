@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: 2025 Kongiok
+# SPDX-License-Identifier: MPL-2.0
+name: Lint whole project
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current branch
+        uses: actions/checkout@v4
+
+      - name: Setup mise
+        uses: jdx/mise-action@v2
+
+      - name: Install tools
+        uses: mise install
+
+      - name: Lint code base with license
+        uses: mise run lint:license
