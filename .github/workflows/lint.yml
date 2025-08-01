@@ -19,7 +19,7 @@ jobs:
         uses: jdx/mise-action@v2
 
       - name: Install tools
-        uses: mise install
+        run: mise install
 
       - name: Lint code base with license
-        uses: mise run lint:license
+        run: mise run lint:license
