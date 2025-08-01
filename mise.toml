@@ -1,0 +1,6 @@
+# SPDX-FileCopyrightText: 2025 Kongiok
+# SPDX-License-Identifier: MPL-2.0
+
+[tools]
+node = "latest"
+pnpm = "latest"
